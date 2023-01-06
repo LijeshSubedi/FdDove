@@ -1,6 +1,5 @@
 import {
   AccountCircleRounded,
-  HistoryEduRounded,
   HomeRounded,
   MailOutlineRounded,
   MoreHorizRounded,
@@ -10,6 +9,7 @@ import {
 } from "@mui/icons-material";
 import { Box, IconButton, Tooltip, useMediaQuery } from "@mui/material";
 import { Link } from "react-router-dom";
+import PostTweet from "./TweetPost";
 
 const SideNavBar = () =>{
   const isNonMobileScreen = useMediaQuery("(min-width: 1000px)");
@@ -114,7 +114,7 @@ const SideNavBar = () =>{
       </IconButton></Tooltip>
       <br />
       {/* ------------------ New Tweet ------------- */}
-      <Tooltip title="New Tweet" placement="right"><IconButton
+      {/* <Tooltip title="New Tweet" placement="right"><IconButton
         color="primary"
         sx={{
           margin: "0.6rem 0 auto 9rem",
@@ -125,7 +125,8 @@ const SideNavBar = () =>{
       >
         <HistoryEduRounded />
       </IconButton></Tooltip>
-      <br />
+      <br /> */}
+      <PostTweet/>
 
       {/* ---------- Account -------- */}
       <Link to="/about"><Tooltip title="Account" placement="right"><IconButton
